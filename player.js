@@ -99,12 +99,13 @@ function set_moves (moves) {
 }
 
 //
-// handle a click on a face (turn into grey)
+// handle a shift-click on a face (turn into grey)
 //
 
-function click_face () {
-    if ($("#grey").is(":checked"))
+function click_face (event) {
+    if (event.shiftKey) {
         $(this).css("background-color", "#aaaaaa");
+    }
 }
 
 //
