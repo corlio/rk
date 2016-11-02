@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Interesting Rubik's Cube Patterns</title>
+    <link rel="stylesheet" type="text/css" href="../dep/css/datatables.css"></link>
+    <link rel="stylesheet" type="text/css" href="patterns.css"></link>
+    <script src="../dep/js/jquery.js"></script>
+    <script src="../dep/js/datatables.js"></script>
+    <script src="patterns.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          patterns_setup();
+          $("#table").dataTable({
+              "bPaginate": false,
+              "sDom": '<"top">rt<"bottom"><"clear">',
+              "aaData": PatternsTable,
+              "aoColumns": [
+                  {},
+                  { "bSortable": false },
+                  { "sClass": "center" },
+                  { "sClass": "center" },
+                  { "bSortable": false, "sWidth": "180px" },
+              ],
+          });
+      });
+    </script>
+    <script src="roofpig_and_three.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          patterns_play();
+      });
+    </script>
+  </head><body>
+    <h1>Interesting Rubik's Cube Patterns</h1>
+    <table class="display" id="table">
+      <thead><tr><th>Name</th><th>Algorithm</th><th>Length</th><th>Order</th><th>Display</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </body>
+</html>

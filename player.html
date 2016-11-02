@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Rubik's Cube Player</title>
+    <link rel="stylesheet" type="text/css" href="jquery.cube.css"></link>
+    <script src="../dep/js/jquery.js"></script>
+    <script src="jquery.cube.js"></script>
+    <script src="player.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        init_ui();
+        TheCube = $(".cube").cube({
+          animation: { delay: 500 },
+          size: { width: TheCubeSize, height: TheCubeSize },
+        });
+        $(".face").click(click_face);
+        if (location.search.length > 1) {
+          var m = parse_moves(decodeURI(location.search.substr(1)));
+          set_moves(m);
+          execute_moves();
+        }
+      });
+    </script>
+  </head><body>
+    <button id="randomize">Randomize</button>
+    <button id="reload">Reload</button>
+    <input id="moves" size="80"></input>
+    <button id="execute">Execute</button>
+    <button id="backward">Backward</button>
+    <button id="xturn">X Turn</button>
+    <button id="yturn">Y Turn</button>
+    <button id="zturn">Z Turn</button>
+    <input type="checkbox" id="grey">Grey</input>
+    <hr>
+    <div>
+      <div class="cube" style="margin: 0 auto"></div>
+    </div>
+  </body>
+</html>

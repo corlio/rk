@@ -1,0 +1,26 @@
+table.dataTable {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table.dataTable td, table.dataTable th {
+    border: 1px solid black;
+}
+
+table.dataTable tr.odd  { background-color: white; }
+table.dataTable tr.even { background-color: white; }
+
+table.dataTable tr.odd  td.sorting_1 { background-color: white; }
+table.dataTable tr.even td.sorting_1 { background-color: white; }
+
+div.roofpig {
+    width: 164px;
+    height: 180px;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+}

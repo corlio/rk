@@ -1,0 +1,26 @@
+@page {
+    size: A4 portrait;
+    margin: 1cm;
+}
+
+table.dataTable {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 18cm;
+}
+
+table.dataTable td, table.dataTable th {
+    border: 1px solid black;
+}
+
+div.roofpig {
+    width: 164px;
+    height: 180px;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+}
