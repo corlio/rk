@@ -13,16 +13,18 @@
       $(document).ready(function() {
           patterns_setup();
           $("#table").dataTable({
-              "bPaginate": false,
-              "sDom": '<"top">rt<"bottom"><"clear">',
-              "aaData": PatternsTable,
-              "aoColumns": [
+              "data": PatternsTable,
+              "columns": [
                   {},
-                  { "bSortable": false },
-                  { "sClass": "center" },
-                  { "sClass": "center" },
-                  { "bSortable": false, "sWidth": "180px" },
+                  { "orderable": false },
+                  { "className": "dt-center" },
+                  { "className": "dt-center" },
+                  { "orderable": false, "width": "180px" },
               ],
+              "dom": '<"top">rt<"bottom"><"clear">',
+              "orderClasses": false,
+              "paging": false,
+              "stripeClasses": [],
           });
       });
     </script>
